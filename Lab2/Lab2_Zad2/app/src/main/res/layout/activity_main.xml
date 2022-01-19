@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="56sp" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="17dp"
+        android:onClick="onClickStart"
+        android:text="@string/app_start"
+        android:textColor="#311B92" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickStop"
+        android:text="@string/app_stop"
+        android:textColor="#311B92" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stop"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickReset"
+        android:text="@string/app_reset"
+        android:textColor="#311B92"
+        tools:ignore="ObsoleteLayoutParam" />
+
+</LinearLayout>
