@@ -1,0 +1,8 @@
+
+<resources>
+    <string name="app_name">Lab1_Zad1B</string>
+    <color name="myColor">#F5F5F5</color>
+    <string name="kelvin">to Kelvin</string>
+    <string name="fahrenheit">to Fahrenheit</string>
+    <string name="calc">Calculate</string>
+</resources>
