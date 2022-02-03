@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab4_Zad4</string>
+    <string name="logo">Logo Cafe-Terra</string>
+    <string name="drink_photo">Zdjecie napoku</string>
+    <string name="snack_photo">Zdjecie przekaski</string>
+
+    <string-array name="options">
+        <item>Napoje</item>
+        <item>Przekąski</item>
+        <item>Kafeterie</item>
+    </string-array>
+</resources>
