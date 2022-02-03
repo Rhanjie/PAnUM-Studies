@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab3_Zad3A</string>
+    <string name="email_sender">Adres nadawcy</string>
+    <string name="email_receiver">Adres odbiorcy</string>
+    <string name="subject">Temat</string>
+    <string name="message">Treść wiadomości</string>
+    <string name="send">Wyślij</string>
+    <string name="choose_app">Wybierz aplikację mailową</string>
+</resources>
