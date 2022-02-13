@@ -22,7 +22,7 @@
 
         <activity
             android:name=".OrderActivity"
-            android:label="@string/more_options"
+            android:label="@string/support_panel_title"
             android:parentActivityName=".TopLevelActivity">
 
             <meta-data

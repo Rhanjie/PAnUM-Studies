@@ -3,9 +3,11 @@
     <string name="logo">Logo Cafe-Terra</string>
     <string name="drink_photo">Zdjecie napoju</string>
     <string name="snack_photo">Zdjecie przekaski</string>
-    <string name="more_options">Wiecej opcji</string>
+    <string name="support_panel_title">Support</string>
     <string name="action_share">Udostepnij</string>
     <string name="send_message_to_admin">Wyslij wiadomosc do przedstawiciela firmy</string>
+    <string name="mail_address">Twoj adres mailowy</string>
+    <string name="mail_title">Temat wiadomosci</string>
     <string name="choose_app">Wybierz aplikację mailową</string>
     <string name="mail_default_text">Wpisz tresc wiadomosci</string>
 
