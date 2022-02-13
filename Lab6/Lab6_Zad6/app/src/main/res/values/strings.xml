@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lab6_Zad6</string>
+    <string name="logo">Logo Cafe-Terra</string>
+    <string name="drink_photo">Zdjecie napoju</string>
+    <string name="snack_photo">Zdjecie przekaski</string>
+    <string name="support_panel_title">Support</string>
+    <string name="action_share">Udostepnij</string>
+    <string name="send_message_to_admin">Wyslij wiadomosc do przedstawiciela firmy</string>
+    <string name="coffee_message">Czy chcesz pojsc ze mna na kawe?</string>
+    <string name="mail_address">Twoj adres mailowy</string>
+    <string name="mail_title">Temat wiadomosci</string>
+    <string name="choose_app">Wybierz aplikację mailową</string>
+    <string name="mail_default_text">Wpisz tresc wiadomosci</string>
+
+    <string-array name="options">
+        <item>Napoje</item>
+        <item>Przekąski</item>
+        <item>Kafeterie</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

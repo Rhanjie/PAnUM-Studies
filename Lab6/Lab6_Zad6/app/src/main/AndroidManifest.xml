@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pl.rhanjie.lab6_zad6">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lab6_Zad6">
+
+        <activity
+            android:name="pl.rhanjie.lab6_zad6.activities.TopLevelActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="pl.rhanjie.lab6_zad6.activities.OrderActivity"
+            android:label="@string/support_panel_title"
+            android:parentActivityName="pl.rhanjie.lab6_zad6.activities.TopLevelActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.rhanjie.lab6_zad6.activities.TopLevelActivity" />
+        </activity>
+
+        <activity android:name="pl.rhanjie.lab6_zad6.activities.DrinkCategoryActivity"
+            android:parentActivityName="pl.rhanjie.lab6_zad6.activities.TopLevelActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.rhanjie.lab6_zad6.activities.TopLevelActivity" />
+
+        </activity>
+
+        <activity android:name="pl.rhanjie.lab6_zad6.activities.DrinkActivity"
+            android:parentActivityName="pl.rhanjie.lab6_zad6.activities.DrinkCategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.rhanjie.lab6_zad6.activities.TopLevelActivity" />
+        </activity>
+
+
+
+        <activity android:name="pl.rhanjie.lab6_zad6.activities.SnackCategoryActivity"
+            android:parentActivityName="pl.rhanjie.lab6_zad6.activities.TopLevelActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.rhanjie.lab6_zad6.activities.TopLevelActivity" />
+        </activity>
+
+
+
+        <activity android:name="pl.rhanjie.lab6_zad6.activities.SnackActivity"
+            android:parentActivityName="pl.rhanjie.lab6_zad6.activities.SnackCategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.rhanjie.lab6_zad6.activities.TopLevelActivity" />
+        </activity>
+
+
+        <activity android:name="pl.rhanjie.lab6_zad6.activities.CafeActivity"
+            android:parentActivityName="pl.rhanjie.lab6_zad6.activities.CafeCategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.rhanjie.lab6_zad6.activities.TopLevelActivity" />
+        </activity>
+
+
+        <activity android:name="pl.rhanjie.lab6_zad6.activities.CafeCategoryActivity"
+            android:parentActivityName="pl.rhanjie.lab6_zad6.activities.TopLevelActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.rhanjie.lab6_zad6.activities.TopLevelActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
