@@ -13,7 +13,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class SnackCategoryActivity extends AppCompatActivity {
+public class SnackCategoryActivity extends CustomAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,24 +36,5 @@ public class SnackCategoryActivity extends AppCompatActivity {
         };
 
         listSnacks.setOnItemClickListener(itemClickListener);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        if (item.getItemId() == R.id.action_create_order)
-        {
-            Intent intent = new Intent(this, OrderActivity.class);
-            startActivity(intent);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

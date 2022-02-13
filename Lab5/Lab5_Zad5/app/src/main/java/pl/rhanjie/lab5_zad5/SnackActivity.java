@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 
-public class SnackActivity extends AppCompatActivity
+public class SnackActivity extends CustomAppCompatActivity
 {
     public static final String EXTRA_SNACK = "drinkId";
 
@@ -40,26 +40,5 @@ public class SnackActivity extends AppCompatActivity
         ImageView photo = findViewById(R.id.photo);
         photo.setImageResource(snack.getImageResourceId());
         photo.setContentDescription(snack.getName());
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        if (item.getItemId() == R.id.action_create_order)
-        {
-            Intent intent = new Intent(this, OrderActivity.class);
-            startActivity(intent);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

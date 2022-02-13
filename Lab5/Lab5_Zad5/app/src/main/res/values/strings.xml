@@ -6,6 +6,7 @@
     <string name="support_panel_title">Support</string>
     <string name="action_share">Udostepnij</string>
     <string name="send_message_to_admin">Wyslij wiadomosc do przedstawiciela firmy</string>
+    <string name="coffee_message">Czy chcesz pojsc ze mna na kawe?</string>
     <string name="mail_address">Twoj adres mailowy</string>
     <string name="mail_title">Temat wiadomosci</string>
     <string name="choose_app">Wybierz aplikację mailową</string>

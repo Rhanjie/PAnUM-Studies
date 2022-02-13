@@ -23,7 +23,7 @@
     <ListView
         android:id="@+id/list_options"
         android:layout_width="match_parent"
-        android:layout_height="487dp"
+        android:layout_height="404dp"
         android:entries="@array/options" />
 
     <Button

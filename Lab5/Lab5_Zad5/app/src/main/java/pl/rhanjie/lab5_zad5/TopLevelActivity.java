@@ -13,7 +13,7 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class TopLevelActivity extends AppCompatActivity {
+public class TopLevelActivity extends CustomAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,36 +57,9 @@ public class TopLevelActivity extends AppCompatActivity {
 
         Button sendButton = findViewById(R.id.buttonSendMessageTop);
         sendButton.setOnClickListener(v -> {
-            sendMessage();
-        });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        if (item.getItemId() == R.id.action_create_order) {
             Intent intent = new Intent(this, OrderActivity.class);
+
             startActivity(intent);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void sendMessage() {
-        Resources resources = getResources();
-
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.putExtra(Intent.EXTRA_EMAIL, "admin@cafeterra.pl");
-        intent.putExtra(Intent.EXTRA_TEXT, resources.getString(R.string.mail_default_text));
-
-        intent.setType("message/rfc882");
-
-        startActivity(Intent.createChooser(intent, resources.getString(R.string.choose_app)));
+        });
     }
 }
