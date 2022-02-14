@@ -13,7 +13,7 @@ import androidx.appcompat.widget.ShareActionProvider;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.MenuItemCompat;
 
-import pl.rhanjie.lab6_zad6.activities.OrderActivity;
+import pl.rhanjie.lab6_zad6.activities.SupportActivity;
 
 public class CustomAppCompatActivity extends AppCompatActivity {
     private ShareActionProvider shareActionProvider;
@@ -51,7 +51,7 @@ public class CustomAppCompatActivity extends AppCompatActivity {
     {
         if (item.getItemId() == R.id.action_create_order)
         {
-            Intent intent = new Intent(this, OrderActivity.class);
+            Intent intent = new Intent(this, SupportActivity.class);
             startActivity(intent);
             return true;
         }

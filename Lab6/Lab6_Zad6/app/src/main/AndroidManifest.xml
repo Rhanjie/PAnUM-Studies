@@ -21,7 +21,7 @@
         </activity>
 
         <activity
-            android:name="pl.rhanjie.lab6_zad6.activities.OrderActivity"
+            android:name="pl.rhanjie.lab6_zad6.activities.SupportActivity"
             android:label="@string/support_panel_title"
             android:parentActivityName="pl.rhanjie.lab6_zad6.activities.TopLevelActivity">
 

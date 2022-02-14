@@ -11,27 +11,9 @@
         layout="@layout/toolbar"
         android:id="@+id/toolbar" />
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/logo_app"
-        app:srcCompat="@drawable/logo_app"
-        tools:srcCompat="@drawable/logo_app" />
-
-    <ListView
-        android:id="@+id/list_options"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
         android:layout_width="match_parent"
-        android:layout_height="404dp"
-        android:entries="@array/options" />
-
-    <Button
-        android:id="@+id/buttonSendMessageTop"
-        android:layout_width="match_parent"
-        android:layout_height="96dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="@string/send_message_to_admin" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>
