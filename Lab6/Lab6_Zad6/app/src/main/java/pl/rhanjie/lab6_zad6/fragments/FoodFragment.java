@@ -18,7 +18,6 @@ import pl.rhanjie.lab6_zad6.R;
 
 public class FoodFragment extends Fragment {
     public FoodFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -29,10 +28,6 @@ public class FoodFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        /*Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);*/
 
         Activity activity = getActivity();
         View view = inflater.inflate(R.layout.fragment_food, container, false);

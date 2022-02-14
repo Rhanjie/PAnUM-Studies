@@ -12,18 +12,14 @@ import pl.rhanjie.lab6_zad6.fragments.CafeFragment;
 
 public class CafeActivity extends CustomAppCompatActivity
 {
-    public static final String EXTRA_CAFE = "cafeId";
+    public static final String EXTRA_ITEM = "itemId";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cafe);
+        contentView = R.layout.activity_cafe;
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()

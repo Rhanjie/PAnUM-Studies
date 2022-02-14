@@ -11,30 +11,22 @@ import androidx.appcompat.widget.Toolbar;
 
 import pl.rhanjie.lab6_zad6.CustomAppCompatActivity;
 import pl.rhanjie.lab6_zad6.R;
+import pl.rhanjie.lab6_zad6.fragments.FoodFragment;
+import pl.rhanjie.lab6_zad6.fragments.ItemListFragment;
 import pl.rhanjie.lab6_zad6.models.Snack;
 
 public class SnackCategoryActivity extends CustomAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        contentView = R.layout.activity_snack_category;
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_snack_category);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
-        ArrayAdapter<Snack> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Snack.snacks);
-        ListView listSnacks = findViewById(R.id.list_snacks);
-        listSnacks.setAdapter(listAdapter);
-
-        AdapterView.OnItemClickListener itemClickListener = (listSnacks1, itemView, position, id) -> {
-            Intent intent = new Intent(SnackCategoryActivity.this, SnackActivity.class);
-            intent.putExtra(SnackActivity.EXTRA_ITEM, (int) id);
-
-            startActivity(intent);
-        };
-
-        listSnacks.setOnItemClickListener(itemClickListener);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.fragment_container_view, ItemListFragment.class, null)
+                    .commit();
+        }
     }
 }

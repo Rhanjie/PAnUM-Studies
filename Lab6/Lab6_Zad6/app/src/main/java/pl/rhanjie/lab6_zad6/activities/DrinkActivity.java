@@ -20,13 +20,9 @@ public class DrinkActivity extends CustomAppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drink);
+        contentView = R.layout.activity_drink;
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()

@@ -20,13 +20,9 @@ public class SnackActivity extends CustomAppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_snack);
+        contentView = R.layout.activity_snack;
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()

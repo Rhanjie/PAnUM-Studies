@@ -10,32 +10,26 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 
 import pl.rhanjie.lab6_zad6.CustomAppCompatActivity;
+import pl.rhanjie.lab6_zad6.fragments.FoodFragment;
+import pl.rhanjie.lab6_zad6.fragments.ItemListFragment;
 import pl.rhanjie.lab6_zad6.models.Drink;
 import pl.rhanjie.lab6_zad6.R;
 
 
 public class DrinkCategoryActivity extends CustomAppCompatActivity {
+    public static final String EXTRA_CATEGORY = "categoryId";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        contentView = R.layout.activity_drink_category;
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drink_category);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-
-        ArrayAdapter<Drink> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Drink.drinks);
-        ListView listDrinks = findViewById(R.id.list_drinks);
-        listDrinks.setAdapter(listAdapter);
-
-        AdapterView.OnItemClickListener itemClickListener = (listDrinks1, itemView, position, id) -> {
-            Intent intent = new Intent(DrinkCategoryActivity.this, DrinkActivity.class);
-            intent.putExtra(DrinkActivity.EXTRA_ITEM, (int) id);
-
-            startActivity(intent);
-        };
-
-        listDrinks.setOnItemClickListener(itemClickListener);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.fragment_container_view, ItemListFragment.class, null)
+                    .commit();
+        }
     }
 }

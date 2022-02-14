@@ -1,6 +1,6 @@
 package pl.rhanjie.lab6_zad6.fragments;
 
-import static pl.rhanjie.lab6_zad6.activities.CafeActivity.EXTRA_CAFE;
+import static pl.rhanjie.lab6_zad6.activities.CafeActivity.EXTRA_ITEM;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -17,7 +17,6 @@ import pl.rhanjie.lab6_zad6.R;
 
 public class CafeFragment extends Fragment {
     public CafeFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -28,15 +27,11 @@ public class CafeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        /*Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);*/
 
         Activity activity = getActivity();
         View view = inflater.inflate(R.layout.fragment_cafe, container, false);
 
-        int cafeId = (Integer)activity.getIntent().getExtras().get(EXTRA_CAFE);
+        int cafeId = (Integer)activity.getIntent().getExtras().get(EXTRA_ITEM);
         Cafe cafe = Cafe.cafes[cafeId];
 
         TextView name = view.findViewById(R.id.name);

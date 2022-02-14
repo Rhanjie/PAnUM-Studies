@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 
 import pl.rhanjie.lab6_zad6.R;
 
-public class Snack {
+public class Snack implements Item {
     private final String name;
     private final String description;
     private final int imageResourceId;

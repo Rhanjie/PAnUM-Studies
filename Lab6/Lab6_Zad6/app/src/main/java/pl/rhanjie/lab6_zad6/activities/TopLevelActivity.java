@@ -14,30 +14,29 @@ import pl.rhanjie.lab6_zad6.R;
 public class TopLevelActivity extends CustomAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_top_level);
+        contentView = R.layout.activity_top_level;
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        super.onCreate(savedInstanceState);
 
         AdapterView.OnItemClickListener itemClickListener = (listView, v, position, id) -> {
+            Intent intent;
             switch (position) {
                 case 0: {
-                    Intent intent = new Intent(TopLevelActivity.this, DrinkCategoryActivity.class);
+                    intent = new Intent(TopLevelActivity.this, DrinkCategoryActivity.class);
 
                     startActivity(intent);
                     break;
                 }
 
                 case 1: {
-                    Intent intent = new Intent(TopLevelActivity.this, SnackCategoryActivity.class);
+                    intent = new Intent(TopLevelActivity.this, SnackCategoryActivity.class);
 
                     startActivity(intent);
                     break;
                 }
 
                 case 2: {
-                    Intent intent = new Intent(TopLevelActivity.this, CafeCategoryActivity.class);
+                    intent = new Intent(TopLevelActivity.this, CafeCategoryActivity.class);
 
                     startActivity(intent);
                     break;

@@ -2,8 +2,7 @@ package pl.rhanjie.lab6_zad6.models;
 
 import androidx.annotation.NonNull;
 
-public class Cafe
-{
+public class Cafe implements Item {
     private final String name;
     private final String address;
     private final String openingHours;

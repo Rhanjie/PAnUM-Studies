@@ -20,13 +20,9 @@ public class OrderActivity extends CustomAppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        contentView = R.layout.activity_order;
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        assert actionBar != null;
-        actionBar.setDisplayHomeAsUpEnabled(true);
 
         Button sendButton = findViewById(R.id.SendButton);
         sendButton.setOnClickListener(v -> {
